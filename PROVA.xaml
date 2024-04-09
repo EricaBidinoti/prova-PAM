@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AVALIACAO.prova"
+             Title="Rolar o dado">
+    
+    <VerticalStackLayout>
+        <Label 
+            Text="ROLADOR DE DADOS"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <Label
+            x:Name="RandomNumber"
+            VerticalOptions="Center"
+            HorizontalOptions="Center"
+            />
+
+        <Picker
+            
+            x:Name="SidePicker"
+            Title="Quantidade de lados">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:Int16}">
+                    <x:Int16>4
+                    </x:Int16>
+                    <x:Int16>6</x:Int16>
+                    <x:Int16>10</x:Int16>
+                    <x:Int16>20</x:Int16>
+                    <x:Int16>100</x:Int16>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+
+        <Button
+            x:Name="RollDice"
+            Text="ROLAR O DADO"
+            />
+    </VerticalStackLayout>
+</ContentPage>
